@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap"
+    />
+    <title>Escolha Seu Plano</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><span class="sys">Sys</span><span class="os">Os</span></a
+          >
+        </div>
+        <ul class="links">
+          <li><a class="link-text" href="index.html">Home</a></li>
+          <li><a class="link-text" href="planos.html">Nossos Planos</a></li>
+          <li><a class="link-text" href="sobre.html">Sobre</a></li>
+          <li>
+            <a
+              class="link-text"
+              href="https://github.com/RamonSilva20/mapos#readme"
+              target="_blank"
+              >Experimente Agora</a
+            >
+          </li>
+        </ul>
+        <a href="login.html" class="action-btn" target="_blank">Cadastrar</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planos.html">Nossos Planos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li>
+          <a href="https://github.com/RamonSilva20/mapos#readme" target="_blank"
+            >Experimente GRÁTIS</a
+          >
+        </li>
+        <li>
+          <a href="login.html" class="action-btn" target="_blank">Cadastrar</a>
+        </li>
+      </div>
+    </header>
+
+    <section class="pricing-cards">
+      <!-- CARD FREE -->
+      <div class="card-free">
+        <h2 class="card-title-free">Free</h2>
+        <div class="card-price-free">
+          <span class="currency">R$</span>
+          <span class="amount">00,00</span>
+          <span class="period">/Mensal</span>
+        </div>
+
+        <ul class="card-features">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+        </ul>
+
+        <button class="btn-free">
+          <a href="https://github.com/RamonSilva20/mapos#readme" target="_blank"
+            >Experimente Agora</a
+          >
+        </button>
+      </div>
+      <!-- CARD FREE -->
+
+      <div class="card-basico">
+        <h2 class="card-title-basico">Básico</h2>
+        <div class="card-price-basico">
+          <span class="currency">R$</span>
+          <span class="amount">99,99</span>
+          <span class="period">/Mensal</span>
+        </div>
+
+        <ul class="card-features">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+
+        <button class="btn-basico">Escolha seu Plano</button>
+      </div>
+
+      <div class="card-padrao">
+        <h2 class="card-title-padrao">Padrão</h2>
+        <div class="card-price-padrao">
+          <span class="currency">R$</span>
+          <span class="amount">199,99</span>
+          <span class="period">/Mensal</span>
+        </div>
+
+        <ul class="card-features">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+        </ul>
+
+        <button class="btn-padrao">Escolha seu Plano</button>
+      </div>
+
+      <div class="card-full">
+        <h2 class="card-title-full">Full</h2>
+        <div class="card-price-full">
+          <span class="currency">R$</span>
+          <span class="amount">299,99</span>
+          <span class="period">/Mensal</span>
+        </div>
+
+        <ul class="card-features">
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+          <li>Feature 4</li>
+          <li>Feature 5</li>
+        </ul>
+
+        <button class="btn-full">Escolha seu Plano</button>
+      </div>
+    </section>
+    <div class="contribution">
+      <h2 class="donate">Doações</h2>
+      <p class="donate-text">
+        Gosta do MapOs e gostaria de contribuir com seu desenvolvimento? Doações
+        podem ser realizadas nos links:
+      </p>
+      <a class="donate-link" href="https://www.catarse.me/mapos" target="_blank"
+        >Contribuição Mensal</a
+      >
+      <a class="donate-link" href="https://ko-fi.com/mapos" target="_blank"
+        >Contribuição Esporádica</a
+      >
+    </div>
+
+    <!--BOTÃO WHATSAPP-->
+    <div class="action">
+      <span onclick="actionToggle();"></span>
+      <div id="chatOptions">
+        <div class="mainMenu">
+          <ul class="lista-principal">
+            <li>
+              <a href="https://wa.me/553299582927?text=Ol%C3%A1" target="_blank"
+                >WhatsApp</a
+              >
+            </li>
+            <li>
+              <a href="tel:+553299582927" style="margin-bottom: 10px"
+                >Ligar (32) 99582927</a
+              >
+            </li>
+          </ul>
+          <b class="small" style="color: #000">mais opções</b>
+          <ul class="lista-outros">
+            <li><a href="sobre.html" target="_blank">Mais Informações</a></li>
+            <li><a href="login.html" target="_blank">Cadastre-se</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scriptnavbar.js"></script>
+  </body>
+</html>

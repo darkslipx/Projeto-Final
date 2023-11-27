@@ -1,0 +1,1459 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Roboto:wght@500&family=Young+Serif&display=swap");
+/*Estilos gerais para todos os elementos HTML*/
+* {
+  font-family: Roboto, young-serif;
+  margin: 0; /*remove margem*/
+  padding: 0; /*remove os preenchimentos padrão*/
+  outline: none; /*remove contorno padrão*/
+  box-sizing: border-box; /*garante que o tamanho inclua a borda e o preenchimento*/
+  letter-spacing: 1px;
+}
+
+/*Estilos para o corpo do documento HTML*/
+body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000000;
+}
+/* Estilização de listas removendo os marcador da lista */
+li {
+  list-style: none;
+}
+
+.body-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Definição de variáveis de cor usando root para reutilização*/
+:root {
+  --color-neutral-0: #0e0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29e;
+  --color-neutral-40: #f5f5f5;
+}
+
+/* ----------- ------------------------------------------------------------------------- -------COMEÇO CSS DA PAGINA PRINCIPAL --- ------------------------------------------------------------------------- -----------*/
+
+/* -------------- ------------------------------------------------------------------------- ---Estilos para o cabeçalho (HEADER)------ ------------------------------------------------------------------------- ------- */
+header {
+  position: relative;
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+/* Estilos para links dentro do cabeçalho */
+
+/* Estilos para a barra de navegação */
+.navbar {
+  width: 100%;
+  height: 60%;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para o logotipo dentro da barra de navegação */
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilos para os links na barra de navegação */
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Estilos para o texto do link quando hover */
+.link-text:hover {
+  color: #f28e13; /* Cor do texto ao passar o mouse por cima */
+  opacity: 0.8;
+}
+
+/* Estilos para o botão de alternância (toggle) da barra de navegação */
+.navbar .toggle_btn {
+  color: #000000;
+  font-size: 2rem;
+  cursor: pointer; /* mãozinha(pointer) quando 
+    o mouse está sobre o elemento,
+    indicando que é interativo ou clicável*/
+  display: none; /* Oculta o elemento */
+}
+
+/* Estilos para botões de ação */
+.action-btn {
+  background-color: #f28e13;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer; /* mãozinha(pointer) quando o 
+    mouse está sobre o elemento,
+    indicando que é interativo ou clicável*/
+  transition: scale 0.2 ease; /* Efeito de transição no hover */
+}
+
+/* Efeito de escala no hover do botão de ação */
+.action-btn:hover {
+  scale: 1.05; /* Aumenta ligeiramente o tamanho no hover */
+  color: #000000;
+}
+/* Efeito de escala ao clicar no botão de ação */
+.action-btn:active {
+  scale: 0.95; /* Reduz ligeiramente o tamanho ao clicar */
+}
+
+/* Estilos para o menu suspenso (dropdown) */
+.dropdown_menu {
+  display: none; /* Oculta o elemento */
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* fundo semitransparente usando a cor RGBA */
+  backdrop-filter: blur(
+    15px
+  ); /* Aplica um efeito de desfoque (blur) ao fundo do elemento usando o filtro de fundo */
+  border-radius: 10px;
+  overflow: hidden; /* Esconde qualquer conteúdo que exceda as dimensões do elemento */
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Define a transição suave da altura do elemento ao longo de 0.2 segundos,
+    utilizando uma função de temporização (cubic-bezier) para a animação */
+}
+
+/* Estilos quando o menu suspenso está aberto */
+.dropdown_menu.open {
+  height: 240px; /* Altura expandida ao abrir o menu */
+}
+
+/* Estilos para os itens de lista no menu suspenso */
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Estilos para botões de ação no menu suspenso */
+.dropdown_menu .action-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Definições de cores para o SYSOS*/
+.os {
+  color: #f28e13;
+}
+.sys {
+  color: #000000;
+}
+/* FINAL estilos cabeçalho (HEADER)*/
+
+/* Estilos para as seções de texto e imagens PAGINA PRINCIPAL */
+
+/* Estilo para as seções com a classe .container-texts */
+.container-texts {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  padding: 1.25rem; /* Adiciona espaçamento interno */
+  /* Adicione outros estilos de largura, margens, etc., conforme necessário */
+  background-color: #ffffff;
+  max-width: 1500px; /* Defina a largura máxima desejada para o conteúdo */
+  margin: 0 auto; /* Isso centraliza a div/container na tela */
+  text-align: center; /* Isso centraliza o texto dentro do container */
+  font-size: 24px;
+}
+
+/* Estilo para os elementos h2 dentro de .container-texts */
+.container-texts h2 {
+  font-family: Roboto;
+  padding: 1rem;
+  font-size: 45px;
+  text-align: center;
+  color: #f28e13;
+}
+
+/* Estilo para a classe .image-main2 */
+.image-main2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-main3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FINAL IMAGES E TEXTOS PAGINA PRINCIPAL */
+
+/* COMEÇO FEATURE E CARDS PAGINA PRINCIPAL */
+
+/* Estilo para o cabeçalho da seção de cartões */
+section .card-header {
+  font-family: Roboto;
+  margin-bottom: 0.5rem;
+  color: #f28e13;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+/* Estilo para os botões dos cartões */
+.card-btn-color {
+  margin-top: 1rem;
+  background-color: #f28e13;
+  border-radius: 1.25rem;
+  padding: 0.3125rem;
+}
+/* Estilo para o contêiner de características */
+.container-features {
+  max-width: 75rem;
+  margin: auto;
+  padding: 4rem 2rem; /* Preenchimento de 5rem no topo e na base, 2rem nos lados */
+}
+/* Estilo para o contêiner dos cartões */
+.features {
+  margin-top: 2rem;
+  display: grid; /* Usa um layout de grid */
+  grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas iguais */
+  gap: 2rem; /* Espaço entre as colunas */
+}
+
+/* Estilo para os cartões individuais */
+.features .card {
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent; /* Borda transparente de 2px */
+  border-radius: 1.25rem;
+  transition: all 0.3ease; /* Transição de animação de 0.3s */
+}
+
+/* Efeito hover nos cartões */
+.features .card:hover {
+  background-color: #323232;
+  border-color: #fff;
+}
+
+/* Estilo para os spans dentro dos cartões */
+.features .card span {
+  display: inline-block; /* Exibição em linha */
+  background-color: #27272a;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  border-radius: 5px;
+}
+
+/* Estilos para os diferentes títulos dentro dos cartões */
+.features .card .title-arrow,
+.title-money,
+.title-address,
+.title-question {
+  color: #f28e13;
+}
+
+/* Estilos para os ícones dentro dos cartões */
+.features .card .fa-arrow,
+.fa-money,
+.fa-address,
+.fa-address,
+.fa-question {
+  color: #f28e13;
+}
+
+/* Estilo para os parágrafos dentro dos cartões */
+.features .card p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+/* Estilo para os links dentro dos cartões */
+.features .card a {
+  color: #000000;
+  transition: all 0.3s ease; /* Transição suave de animação */
+}
+/* Efeito hover nos links dentro dos cartões */
+.features .card a:hover {
+  color: #ffffff;
+}
+/* ------------------------------------------------------------------------- FINAL FEATURES E CARDS PAGINA PRINCIPAL   -------------------------------------------------------------------------  */
+
+/* ---------- ------------------------------------------------------------------------- --- COMEÇO FOOTER PAGINA PRINCIPAL -- ------------------------------------------------------------------------- ------ */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 200px;
+  background-color: #ffffff;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wrapper .footer-widget {
+  width: calc(20% - 30px);
+  margin: 0 15px 15px;
+  padding: 0 12px;
+}
+
+.wrapper .footer-widget:nth-child(1) {
+  width: calc(40% - 50px);
+  margin-right: 15px;
+}
+
+.wrapper .footer-widget .logo {
+  margin-bottom: 1px;
+  vertical-align: middle;
+}
+
+.wrapper .footer-widget p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.wrapper .footer-widget .socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper .footer-widget .socials li {
+  list-style: none;
+}
+
+.wrapper .footer-widget .socials li a {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .socials li a:hover {
+  background-color: #f28e13;
+}
+
+.wrapper .footer-widget h6 {
+  color: #f28e13;
+  margin: 10px 0 35px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wrapper .footer-widget .links li {
+  list-style: none;
+}
+
+.wrapper .footer-widget .links li a {
+  color: #000000;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 32px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .links li a:hover {
+  color: #f28e13;
+}
+
+.copyright-wrapper {
+  padding: 20px 0;
+  border-top: 1px solid rgba(88, 89, 120, 0.4);
+}
+
+.copyright-wrapper p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.copyright-wrapper p a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.copyright-wrapper p a:hover {
+  color: #f28e13;
+}
+
+/* ----------------------------------------------------------------- FINAL FOOTER ------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------- -FINAL CSS DA PAGINA PRINCIPAL -------------------------------------------------------------------*/
+
+/* --------------------------------------------------------------------COMEÇO CSS PAGINA PLANOS---------------------------------------------------------------------------------------*/
+
+/* Estilos para as cartas de preços */
+.pricing-cards {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+/* Estilo para a lista de características das cartas */
+.card-features li {
+  margin-bottom: 1rem;
+}
+
+/* Estilos para os títulos das cartas */
+.card-title-free,
+.card-title-basico,
+.card-title-padrao,
+.card-title-full {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+/* Estilos para a carta "FREE" */
+.card-free {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.3rem #c17cfa; /*sombra ao redor do cartão:0(deslocamento na horizontal), 
+    0.2rem (deslocamento na vertical), 0.3rem (desfoque)*/
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 0.5rem solid #c17cfa; /*borda no topo do cartão*/
+}
+
+/* Estilos para a carta "BÁSICO" */
+.card-basico {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.3rem #6cced9; /*sombra ao redor do cartão:0(deslocamento na horizontal), 
+    0.2rem (deslocamento na vertical), 0.3rem (desfoque)*/
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 0.5rem solid #6cced9; /*borda no topo do cartão*/
+}
+/* Estilos para a carta "PADRÃO" */
+.card-padrao {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.3rem #a3d4a5; /*sombra ao redor do cartão:0(deslocamento na horizontal), 
+    0.2rem (deslocamento na vertical), 0.3rem (desfoque)*/
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 0.5rem solid #a3d4a5; /*borda no topo do cartão*/
+}
+
+/* Estilos para a carta "FULL" */
+.card-full {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.3rem #dbab6e; /*sombra ao redor do cartão:0(deslocamento na horizontal), 
+    0.2rem (deslocamento na vertical), 0.3rem (desfoque)*/
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 0.5rem solid #dbab6e; /*borda no topo do cartão*/
+}
+
+/* Efeitos de hover para as cartas */
+.card-free:hover {
+  transform: translate(-5px); /* Translação de -5px ao hover */
+}
+
+.card-basico:hover {
+  transform: translate(-5px); /* Translação de -5px ao hover */
+}
+
+.card-padrao:hover {
+  transform: translate(-5px); /* Translação de -5px ao hover */
+}
+
+.card-full:hover {
+  transform: translate(-5px); /* Translação de -5px ao hover */
+}
+
+/* Estilos para os títulos das cartas */
+.card-title-free {
+  color: #c17cfa;
+}
+
+.card-title-basico {
+  color: #6cced9;
+}
+
+.card-title-padrao {
+  color: #a3d4a5;
+}
+
+.card-title-full {
+  color: #cc8a0e;
+}
+
+/* Estilos para os preços das cartas */
+.card-price-free {
+  font-size: 2.25rem;
+  color: #c17cfa;
+  margin-bottom: 2rem;
+}
+
+.card-price-basico {
+  font-size: 2.25rem;
+  color: #6cced9;
+  margin-bottom: 2rem;
+}
+
+.card-price-padrao {
+  font-size: 2.25rem;
+  color: #a3d4a5;
+  margin-bottom: 2rem;
+}
+
+.card-price-full {
+  font-size: 2.25rem;
+  color: #dbab6e;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para a lista de características das cartas */
+.card-features {
+  list-style: none;
+  padding: 0;
+}
+/* Estilos para os marcadores de características */
+.card-features li {
+  &::before {
+    content: "✓"; /* Símbolo do marcador */
+    color: #008000;
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para os botões "Escolha seu plano" */
+.btn-free {
+  background-color: #c17cfa;
+  color: #000000;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /*transição suave da cor de fundo com duração de 0.3 segundos */
+}
+
+.btn-basico {
+  background-color: #6cced9;
+  color: #000000;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /*transição suave da cor de fundo com duração de 0.3 segundos */
+}
+.btn-padrao {
+  background-color: #a3d4a5;
+  color: #000000;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /*transição suave da cor de fundo com duração de 0.3 segundos */
+}
+.btn-full {
+  background-color: #dbab6e;
+  color: #000000;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /*transição suave da cor de fundo com duração de 0.3 segundos */
+}
+/* Efeitos de hover para os botões "Escolha seu plano" */
+.btn-free:hover {
+  background-color: #a43ff7de;
+}
+
+.btn-basico:hover {
+  background-color: #6cced9;
+}
+
+.btn-padrao:hover {
+  background-color: #07d630;
+}
+
+.btn-full:hover {
+  background-color: #db7e08;
+}
+/* --------------------------------------------------------------------DOAÇÕES-------------------------------------------------------------------*/
+
+.contribution .donate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #db7e08;
+}
+
+.contribution .donate-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contribution .donate-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #db7e08;
+}
+/* --------------------------------------------------------------------FIM DOAÇÕES-------------------------------------------------------------------*/
+
+/*---------------------------------------------------------FEATURES PAGINA SOBRE -----------------------------------------------------------------------*/
+.container-about-2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.25rem;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.card-about {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  text-align: center;
+  width: 90%;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  display: inline-block;
+}
+
+.card-about i {
+  margin-top: 1rem;
+  color: #f28e13;
+}
+
+.card-about h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 0.8rem;
+}
+
+.card-about p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #000000;
+}
+
+.button-about {
+  display: inline-block;
+  background-color: #f28e13;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  margin-top: 0.625rem;
+  cursor: pointer;
+}
+
+.button-about:hover {
+  background-color: #000000;
+}
+
+/*-------------------------------------------------------------FEATURES PAGINA SOBRE -----------------------------------------------------------*/
+
+/*-------------------------------------------------------------BOTÃO WHATSAPP -----------------------------------------------------------*/
+.action a {
+  color: #000;
+  text-decoration: none;
+}
+
+.mainMenu {
+  width: 250px;
+  padding: 15px !important;
+}
+
+.mainMenu .lista-principal {
+  margin-bottom: 10px;
+}
+
+.action {
+  position: fixed;
+  z-index: 100;
+  bottom: 12rem;
+  right: 1.25rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  box-shadow: 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+
+.action span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10px;
+  background: url(Imagens/wppicon.png) no-repeat center center;
+  background-size: 50px 50px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.action.active span {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
+
+.action.active span:before {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1em;
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\2573";
+  background-color: #000 !important;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.action .mainMenu {
+  position: absolute;
+  bottom: 55px;
+  right: 10px;
+  background: #faf9f8;
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 -1px 12px 0 rgb(0 0 0/40%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.action.active .mainMenu {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+  padding: 40px;
+}
+
+.action .mainMenu ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.action a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+/* --------------------------------------------------------------------FIM CSS PAGINA PLANOS-------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------------------COMEÇO PÁGINA CONECTAR-SE---------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------LOGIN/CADASTRO RESPONSIVO--------------------------------------------------------------------------*/
+
+/* Definição de estilos para o container principal */
+.container {
+  background-color: #fff;
+  border-radius: 2rem;
+  border-color: #f28e13;
+  box-shadow: 0 1rem 2rem #f28e13; /* Define a sombra para a caixa */
+  position: relative;
+  overflow: hidden;
+  width: 48rem;
+  max-width: 100%;
+  min-height: 30rem;
+  margin-top: 6.25rem;
+  margin-bottom: 9.3575rem;
+}
+
+/* Estilos para parágrafos dentro do container */
+.container p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.018rem;
+  margin: 1.25rem 0;
+}
+
+/* Estilos para spans dentro do container */
+.container span {
+  font-size: 0.7rem;
+}
+
+/* Estilos para links dentro do container */
+.container a {
+  color: #333;
+  font-size: 0.8rem;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  margin: 1rem 0 0.7rem;
+}
+
+/* Estilos para botões dentro do container */
+.container button {
+  background-color: #f28e13;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.625rem 2.8125rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Transforma o texto do botão em caixa alta */
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+/* Efeito hover para botões dentro do container */
+.container button:hover {
+  background-color: #020101;
+}
+/* Estilos para botões ocultos dentro do container */
+.container button.hidden {
+  border-color: #ffffff;
+}
+/* Estilos para formulários dentro do container */
+.container form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem;
+  height: 100%;
+}
+
+/* Estilos para inputs dentro do container */
+.container input {
+  background-color: #eee;
+  border: none; /* Remove a borda do input */
+  margin: 0.5rem 0;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.6rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  outline: none;
+}
+/* Estilos para o container do formulário de login */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out; /*transição para todas as propriedades */
+}
+
+/* Estilos para o painel de login */
+.sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2; /* Define o índice de empilhamento */
+}
+/* Efeitos ao ativar o painel de login dentro do container */
+.container.active .sign-in {
+  transform: translateX(100%); /* Move o painel de login para a direita */
+}
+/* Estilos para o painel de registro */
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+/* Efeitos ao ativar o painel de registro dentro do container */
+.container.active .sign-up {
+  transform: translateX(100%); /* Move o painel de registro para a direita */
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s; /* Define a animação de movimento */
+}
+
+/* Animação para o painel de registro */
+/* Define uma animação keyframe chamada 'move' */
+@keyframes move {
+  0%,
+  49.99% {
+    /* Define o estado inicial da animação (0% a 49.99%) */
+    opacity: 0; /* Define a opacidade como 0 (elemento invisível) */
+    z-index: 1; /* Define o índice Z como 1 para o estado inicial */
+  }
+  50%,
+  100% {
+    /* Define o estado final da animação (50% a 100%) */
+    opacity: 1; /* Define a opacidade como 1 (elemento visível) */
+    z-index: 5; /* Define o índice Z como 5 para o estado final */
+  }
+}
+
+/* Estilos para ícones sociais */
+.social-icons {
+  margin: 1.25rem 0;
+}
+
+/* Estilos para links de ícones sociais */
+.social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.1875rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Container para o toggle */
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out; /* Define a transição para todas as propriedades */
+  border-radius: 9.375rem 0 0 6.25rem; /* Define o raio do canto */
+  z-index: 1000;
+}
+
+/* Efeitos ao ativar o container do toggle */
+.container.active .toggle-container {
+  transform: translateX(-100%); /* Move o container do toggle para a esquerda */
+  border-radius: 0 9.375rem 6.25rem 0; /* Define o raio do canto */
+}
+
+/* Estilos para o toggle */
+.toggle {
+  background-color: #f28e13;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #f28e13
+  ); /* Define o fundo usando gradiente linear */
+  color: #fff;
+  position: relative;
+  left: -100%; /* Define a partir da esquerda */
+  height: 100%;
+  width: 200%;
+  transform: translateX(0); /* Define a posição inicial */
+  transition: all 0.6s ease-in-out; /* Define a transição para todas as propriedades */
+}
+
+/* Efeitos ao ativar o toggle */
+.container.active .toggle {
+  transform: translateX(50%); /* Move o toggle para a metade */
+}
+
+/* Painel para o toggle */
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1.875rem;
+  text-align: center;
+  top: 0;
+  transform: translateX(0); /* Define a posição inicial */
+  transition: all 0.6s ease-in-out; /* Define a transição para todas as propriedades */
+}
+
+/* Efeitos ao ativar o toggle para a esquerda */
+.toggle-left {
+  transform: translateX(-200%); /* Move o toggle para a esquerda fora da tela */
+}
+
+/* Efeitos ao ativar o toggle para a esquerda dentro do container */
+.container.active .toggle-left {
+  transform: translateX(0); /* Move o toggle para a posição inicial na tela */
+}
+
+/* Efeitos ao ativar o toggle para a direita */
+.toggle-right {
+  right: 0; /* Define o alinhamento à direita */
+  transform: translateX(0); /* Move o toggle para a direita fora da tela */
+}
+
+/* Efeitos ao ativar o toggle para a direita dentro do container */
+.container.active .toggle-right {
+  transform: translateX(
+    200%
+  ); /* Move o toggle para a posição inicial na tela */
+}
+
+/* -----------------------------------------------------------------FINAL PÁGINA CONECTAR-SE--------------------------------------------------------------*/
+
+/*---------------------------------------------------------COMEÇO DA PAGINA SOBRE NÓS---------------------------------------------------------------------*/
+.container-about {
+  display: block;
+  background-color: #ffffff;
+  margin-top: 2rem;
+}
+
+/* Estilos para texto sobre nós */
+.text-about p {
+  /* Define a margem, alinhamento e outros estilos para o texto */
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  max-width: 900px;
+  position: relative;
+  line-height: 1.25rem;
+}
+
+/* Estilos para a imagem principal */
+.image-main {
+  display: block; /* Define a exibição como bloco */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  background-color: #fff;
+}
+
+/* Container para a seção 'Sobre' */
+.container-about-us {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  padding: 2rem;
+}
+
+/* Estilos para itens */
+.item {
+  text-align: center;
+  height: 30rem;
+  width: 30rem;
+  margin: 2rem;
+}
+/* Estilos para parágrafos dentro dos itens */
+.item p {
+  margin-top: 3rem;
+  text-align: center;
+  /* Define o preenchimento, tamanho da fonte, largura máxima, posição relativa e altura da linha */
+  padding: 2rem;
+  font-size: 20px;
+  max-width: 600px;
+  position: relative;
+}
+/* Estilos para títulos h2 dentro dos itens */
+.item h2 {
+  /* Define a cor de fundo, preenchimento, tamanho da fonte, borda arredondada, largura máxima, posição relativa e altura da linha */
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 30px;
+  border-radius: 0.5rem;
+  position: relative;
+  letter-spacing: 2px;
+  line-height: 1rem;
+}
+
+/* Estilos para ícones sociais */
+.sm {
+  /* Define a exibição como flexível e centraliza o conteúdo horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+/* Estilos para os pseudo-elementos ::before dos links de ícones sociais */
+.sm a {
+  /* Define a exibição como inline-flex, remove decoração de texto, define o tamanho e cor */
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 2.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 0.04375rem;
+}
+/* Estilos para os pseudo-elementos ::before dos links de ícones sociais */
+.sm a::before {
+  content: ""; /* Define o conteúdo vazio */
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 25%;
+  z-index: -1;
+  transition: transform 0.3s ease-in;
+}
+
+/* Estilos para os diferentes gradientes dos ícones */
+.sm a:nth-child(1)::before {
+  background: #38529a;
+}
+.sm a:nth-child(2)::before {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.sm a:nth-child(3)::before {
+  background: #1c96e9;
+}
+.sm a:nth-child(4)::before {
+  background: #000000;
+}
+.sm a:nth-child(5)::before {
+  background: #046596;
+}
+.sm a:hover::before {
+  transform: scale(0);
+}
+.sm a i {
+  transition: transform 0.3s ease-in;
+}
+
+/* Seleciona o elemento 'i' que é filho do quinto elemento âncora ('a') dentro de um elemento com a classe .sm quando está em estado de hover */
+.sm a:nth-child(1):hover i {
+  background: #38529a;
+  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
+  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
+  transform: scale(
+    1.5
+  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
+}
+.sm a:nth-child(2):hover i {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
+  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
+  transform: scale(
+    1.5
+  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
+}
+.sm a:nth-child(3):hover i {
+  background: #1c96e9;
+  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
+  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
+  transform: scale(1.5);
+}
+.sm a:nth-child(4):hover i {
+  background: #000000;
+  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
+  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
+  transform: scale(
+    1.5
+  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
+}
+
+.sm a:nth-child(5):hover i {
+  background: #046596; /* Define o fundo do ícone como #046596 */
+  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
+  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
+  transform: scale(
+    1.5
+  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
+}
+/*--------------------------------------------------------------FINAL DA PAGINA SOBRE NÓS-----------------------------------------------------------*/
+
+/*START RESPONSIVE  PAGINA PRINCIPAL*/
+/*NAVBAR LOGIN/CADASTRO*/
+@media (max-width: 992px) {
+  /*NAVBAR*/
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+    left: 2rem;
+    width: unset;
+  } /*NAVBAR*/
+
+  .image-main,
+  .image-main3,
+  .text-main,
+  .heading {
+    width: 100%;
+    order: 2;
+  }
+
+  .image-main2 {
+    order: 2;
+    height: auto;
+  }
+
+  .image-main,
+  .image-main2 {
+    margin-top: 1.25rem;
+  }
+
+  .image-main img,
+  .image-main3 img {
+    width: 100%;
+    height: auto;
+  }
+  /*FEATURES*/
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  } /*FEATURES*/
+
+  /*FOOTER*/
+  .footer-container {
+    max-width: 960px;
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: calc(50% - 30px);
+  } /*FOOTER*/
+
+  /*START PRICE CARD PAGINA PLANOS*/
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem; /* Ajuste o espaçamento conforme necessário */
+    padding-top: 1rem; /* Adicione espaço superior para compensar a altura da barra de navegação */
+  } /*END RESPONSIVE PRICE CARD PAGINA PLANOS*/
+}
+
+/* COMEÇO RESPONSIVOS 768PX*/
+@media screen and (max-width: 768px) {
+  /*NAVBAR*/
+  .nav-links {
+    display: none;
+  } /*NAVBAR*/
+
+  /*HEADER*/
+  .container-texts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+  .image-main,
+  .image-main3,
+  .text-main,
+  .heading {
+    width: 100%;
+    order: 2;
+  }
+
+  .image-main2 {
+    order: 2;
+    height: auto;
+  }
+
+  .image-main,
+  .image-main2 {
+    margin-top: 1.25rem;
+  }
+
+  .image-main img,
+  .image-main3 img {
+    width: 100%;
+    height: auto;
+  }
+  .container-about {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  } /*HEADER*/
+
+  /*FEATURES*/
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  } /*FEATURES*/
+
+  /*FOOTER*/
+  .footer-container {
+    max-width: 720px;
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: 100%;
+    margin: 0 10px 50px;
+  }
+  /*FOOTER*/
+  /*END RESPONSIVE PAGINA PRINCIPAL*/
+
+  /*START PRICE CARD PAGINA PLANOS*/
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem; /* Ajuste o espaçamento conforme necessário */
+    padding-top: 1rem; /* Adicione espaço superior para compensar a altura da barra de navegação */
+  } /*END RESPONSIVE PRICE CARD PAGINA PLANOS*/
+
+  /*CONTATOS PAGINA PLANOS*/
+  .sm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/*FINAL RESPONSIVOS 768PX*/
+
+/*COMEÇO RESPONSIVOS 576PX*/
+@media (max-width: 576px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+    left: 2rem;
+    width: unset;
+  }
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+} /*FINAL RESPONSIVOS 576PX*/
+
+/*COMEÇO RESPONSIVOS 426PX*/
+@media screen and (max-width: 426px) {
+  body {
+    flex-direction: column;
+  }
+  /*HEADER*/
+  .container-texts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .image-main,
+  .text-main {
+    width: 100%;
+    order: 2;
+  }
+  .text-main h2 {
+    font-size: 7vw;
+  }
+  .image-main {
+    margin-top: 1.25rem;
+  }
+  .image-main img {
+    width: 100%;
+    height: auto;
+  }
+  .container-about {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  } /*HEADER*/
+
+  /*FEATURES*/
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  } /*FEATURES*/
+
+  /*FOOTER*/
+  #footer_content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 2rem;
+  } /*FOOTER*/
+
+  /*CONTATOS PAGINA PLANOS*/
+  .sm {
+    display: flex;
+    flex-direction: column;
+  } /*CONTATOS PAGINA PLANOS*/
+
+  .action {
+    display: none;
+  }
+
+  .item p {
+    min-width: 11rem;
+  }
+
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-about {
+    display: none;
+  }
+} /*FINAL RESPONSIVOS 426PX*/
