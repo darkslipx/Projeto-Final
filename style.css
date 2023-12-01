@@ -29,15 +29,6 @@ li {
   align-items: center;
   justify-content: center;
 }
-
-/*Definição de variáveis de cor usando root para reutilização*/
-:root {
-  --color-neutral-0: #0e0c0c;
-  --color-neutral-10: #171717;
-  --color-neutral-30: #a8a29e;
-  --color-neutral-40: #f5f5f5;
-}
-
 /* ----------- ------------------------------------------------------------------------- -------COMEÇO CSS DA PAGINA PRINCIPAL --- ------------------------------------------------------------------------- -----------*/
 
 /* -------------- ------------------------------------------------------------------------- ---Estilos para o cabeçalho (HEADER)------ ------------------------------------------------------------------------- ------- */
@@ -627,8 +618,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   color: #db7e08;
+   
 }
 
 .contribution .donate-text {
@@ -720,7 +711,7 @@ footer {
 .action {
   position: fixed;
   z-index: 100;
-  bottom: 12rem;
+  bottom: 1rem;
   right: 1.25rem;
   width: 3.125rem;
   height: 3.125rem;
@@ -1048,8 +1039,7 @@ small,
 /* Estilos para texto sobre nós */
 .text-about p {
   /* Define a margem, alinhamento e outros estilos para o texto */
-  margin: 0 auto;
-  text-align: center;
+  text-align: justify;
   background-color: #fff;
   padding: 1rem;
   font-size: 20px;
@@ -1057,6 +1047,7 @@ small,
   max-width: 900px;
   position: relative;
   line-height: 1.25rem;
+  margin: 0 auto;
 }
 
 /* Estilos para a imagem principal */
@@ -1105,118 +1096,8 @@ small,
   line-height: 1rem;
 }
 
-/* Estilos para ícones sociais */
-.sm {
-  /* Define a exibição como flexível e centraliza o conteúdo horizontalmente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
-  gap: 2rem;
-}
 
-/* Estilos para os pseudo-elementos ::before dos links de ícones sociais */
-.sm a {
-  /* Define a exibição como inline-flex, remove decoração de texto, define o tamanho e cor */
-  display: inline-flex;
-  text-decoration: none;
-  font-size: 2.25rem;
-  width: 3.75rem;
-  height: 3.75rem;
-  color: #f0f0f0;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0 0.04375rem;
-}
-/* Estilos para os pseudo-elementos ::before dos links de ícones sociais */
-.sm a::before {
-  content: ""; /* Define o conteúdo vazio */
-  position: absolute;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 25%;
-  z-index: -1;
-  transition: transform 0.3s ease-in;
-}
 
-/* Estilos para os diferentes gradientes dos ícones */
-.sm a:nth-child(1)::before {
-  background: #38529a;
-}
-.sm a:nth-child(2)::before {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-}
-.sm a:nth-child(3)::before {
-  background: #1c96e9;
-}
-.sm a:nth-child(4)::before {
-  background: #000000;
-}
-.sm a:nth-child(5)::before {
-  background: #046596;
-}
-.sm a:hover::before {
-  transform: scale(0);
-}
-.sm a i {
-  transition: transform 0.3s ease-in;
-}
-
-/* Seleciona o elemento 'i' que é filho do quinto elemento âncora ('a') dentro de um elemento com a classe .sm quando está em estado de hover */
-.sm a:nth-child(1):hover i {
-  background: #38529a;
-  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
-  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
-  transform: scale(
-    1.5
-  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
-}
-.sm a:nth-child(2):hover i {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
-  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
-  transform: scale(
-    1.5
-  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
-}
-.sm a:nth-child(3):hover i {
-  background: #1c96e9;
-  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
-  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
-  transform: scale(1.5);
-}
-.sm a:nth-child(4):hover i {
-  background: #000000;
-  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
-  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
-  transform: scale(
-    1.5
-  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
-}
-
-.sm a:nth-child(5):hover i {
-  background: #046596; /* Define o fundo do ícone como #046596 */
-  -webkit-background-clip: text; /* Define o método de recorte de fundo como 'text' para aplicar o fundo somente ao texto */
-  -webkit-text-fill-color: transparent; /* Define a cor do texto como transparente para exibir o fundo aplicado */
-  transform: scale(
-    1.5
-  ); /* Aplica um efeito de escala no ícone aumentando em 1.5 vezes o seu tamanho original */
-}
 /*--------------------------------------------------------------FINAL DA PAGINA SOBRE NÓS-----------------------------------------------------------*/
 
 /*START RESPONSIVE  PAGINA PRINCIPAL*/
