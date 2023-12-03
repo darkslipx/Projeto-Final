@@ -159,14 +159,14 @@ header {
 /* Estilo para as seções com a classe .container-texts */
 .container-texts {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  padding: 1.25rem; /* Adiciona espaçamento interno */
-  /* Adicione outros estilos de largura, margens, etc., conforme necessário */
+  align-items: center; 
+  padding: 1rem; 
   background-color: #ffffff;
-  max-width: 1500px; /* Defina a largura máxima desejada para o conteúdo */
-  margin: 0 auto; /* Isso centraliza a div/container na tela */
-  text-align: center; /* Isso centraliza o texto dentro do container */
+  max-width: 1500px; 
+  margin: 0 auto; 
   font-size: 24px;
+  text-align: justify;
+  gap: 2rem;
 }
 
 /* Estilo para os elementos h2 dentro de .container-texts */
@@ -177,6 +177,8 @@ header {
   text-align: center;
   color: #f28e13;
 }
+
+ 
 
 /* Estilo para a classe .image-main2 */
 .image-main2 {
@@ -1100,7 +1102,13 @@ small,
 
 /*--------------------------------------------------------------FINAL DA PAGINA SOBRE NÓS-----------------------------------------------------------*/
 
-/*START RESPONSIVE  PAGINA PRINCIPAL*/
+
+
+
+
+
+
+/*----------------------------------------------------------START RESPONSIVE  PAGINA PRINCIPAL----------------------------------------------------------*/
 /*NAVBAR LOGIN/CADASTRO*/
 @media (max-width: 992px) {
   /*NAVBAR*/
@@ -1164,10 +1172,14 @@ small,
     align-items: center;
     gap: 1.25rem; /* Ajuste o espaçamento conforme necessário */
     padding-top: 1rem; /* Adicione espaço superior para compensar a altura da barra de navegação */
-  } /*END RESPONSIVE PRICE CARD PAGINA PLANOS*/
+  } /*---------------------------------------------------------END RESPONSIVE PRICE CARD PAGINA PLANOS---------------------------------------------------------*/
 }
 
-/* COMEÇO RESPONSIVOS 768PX*/
+
+
+
+
+/* ----------------------------------------------------------COMEÇO RESPONSIVOS 768PX----------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   /*NAVBAR*/
   .nav-links {
@@ -1247,9 +1259,9 @@ small,
     height: auto;
   }
 }
-/*FINAL RESPONSIVOS 768PX*/
+/*---------------------------------------------------------FINAL RESPONSIVOS 768PX---------------------------------------------------------*/
 
-/*COMEÇO RESPONSIVOS 576PX*/
+/*----------------------------------------------------------COMEÇO RESPONSIVOS 576PX----------------------------------------------------------*/
 @media (max-width: 576px) {
   .navbar .links,
   .navbar .action-btn {
@@ -1269,9 +1281,9 @@ small,
     max-width: 100%;
     height: auto;
   }
-} /*FINAL RESPONSIVOS 576PX*/
+} /*---------------------------------------------------------FINAL RESPONSIVOS 576PX---------------------------------------------------------*/
 
-/*COMEÇO RESPONSIVOS 426PX*/
+/*---------------------------------------------------------COMEÇO RESPONSIVOS  426PX----------------------------------------------------------*/
 @media screen and (max-width: 426px) {
   body {
     flex-direction: column;
@@ -1337,4 +1349,4 @@ small,
   .card-about {
     display: none;
   }
-} /*FINAL RESPONSIVOS 426PX*/
+} /*---------------------------------------------------------FINAL RESPONSIVOS 426PX---------------------------------------------------------*/
