@@ -418,10 +418,9 @@ footer {
 .pricing-cards {
   font-weight: bold;
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  text-align: center;
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 /* Estilo para a lista de características das cartas */
 .card-features li {
