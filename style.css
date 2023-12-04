@@ -646,6 +646,7 @@ footer {
   margin: 1.25rem;
   padding: 3rem;
   gap: 2rem;
+  margin-top: 5rem;
 }
 
 .card-about {
@@ -1076,13 +1077,13 @@ small,
 }
 /* Estilos para parágrafos dentro dos itens */
 .item p {
+  box-sizing: border-box;
   margin-top: 3rem;
-  text-align: center;
   /* Define o preenchimento, tamanho da fonte, largura máxima, posição relativa e altura da linha */
   padding: 2rem;
-  font-size: 20px;
-  max-width: 600px;
-  position: relative;
+  font-size: 15px;
+  max-width: 800px;
+   
 }
 /* Estilos para títulos h2 dentro dos itens */
 .item h2 {
@@ -1172,6 +1173,15 @@ small,
     gap: 1.25rem; /* Ajuste o espaçamento conforme necessário */
     padding-top: 1rem; /* Adicione espaço superior para compensar a altura da barra de navegação */
   } /*---------------------------------------------------------END RESPONSIVE PRICE CARD PAGINA PLANOS---------------------------------------------------------*/
+  .container-about-2 {
+    flex-direction: column; /* Altera para layout de coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .card-about {
+    width: 100%; /* Ocupa a largura total */
+    max-width: unset; /* Remove a largura máxima */
+  }
 }
 
 
@@ -1332,10 +1342,6 @@ small,
     flex-direction: column;
   } /*CONTATOS PAGINA PLANOS*/
 
-  .action {
-    display: none;
-  }
-
   .item p {
     min-width: 11rem;
   }
@@ -1345,7 +1351,4 @@ small,
     height: auto;
   }
 
-  .card-about {
-    display: none;
-  }
 } /*---------------------------------------------------------FINAL RESPONSIVOS 426PX---------------------------------------------------------*/
