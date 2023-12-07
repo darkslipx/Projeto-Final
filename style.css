@@ -418,6 +418,7 @@ footer {
 .pricing-cards {
   font-weight: bold;
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 5rem;
   margin-bottom: 2rem;
@@ -501,19 +502,23 @@ footer {
 
 /* Estilos para os títulos das cartas */
 .card-title-free {
+  font-size: 2rem;
   color: #c17cfa;
 }
 
 .card-title-basico {
+  font-size: 2rem;
   color: #6cced9;
 }
 
 .card-title-padrao {
+  font-size: 2rem;
   color: #a3d4a5;
 }
 
 .card-title-full {
-  color: #cc8a0e;
+  font-size: 2rem;
+  color: #dbab6e;
 }
 
 /* Estilos para os preços das cartas */
@@ -639,6 +644,10 @@ footer {
 }
 /* --------------------------------------------------------------------FIM DOAÇÕES-------------------------------------------------------------------*/
 
+
+
+/* --------------------------------------------------------------------FIM DOAÇÕES-------------------------------------------------------------------*/
+
 /*---------------------------------------------------------FEATURES PAGINA SOBRE -----------------------------------------------------------------------*/
 .container-about-2 {
   display: flex;
@@ -656,9 +665,9 @@ footer {
   width: 90%;
   max-width: 30rem;
   margin: 0 auto;
-  margin-bottom: 1.5rem;
   padding: 1.5rem;
   display: inline-block;
+  margin-top: 50px;
 }
 
 .card-about i {
@@ -1031,6 +1040,8 @@ small,
 
 /* -----------------------------------------------------------------FINAL PÁGINA CONECTAR-SE--------------------------------------------------------------*/
 
+
+
 /*---------------------------------------------------------COMEÇO DA PAGINA SOBRE NÓS---------------------------------------------------------------------*/
 .container-about {
   display: block;
@@ -1077,13 +1088,10 @@ small,
 }
 /* Estilos para parágrafos dentro dos itens */
 .item p {
-  box-sizing: border-box;
+  position: relative;
   margin-top: 3rem;
-  /* Define o preenchimento, tamanho da fonte, largura máxima, posição relativa e altura da linha */
-  padding: 2rem;
-  font-size: 15px;
-  max-width: 800px;
-   
+  padding: 1rem;
+  font-size: 20px;
 }
 /* Estilos para títulos h2 dentro dos itens */
 .item h2 {

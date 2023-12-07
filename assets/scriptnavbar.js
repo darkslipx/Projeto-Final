@@ -28,7 +28,7 @@ function actionToggle() {
     // Verifica se a URL atual contém a palavra "download"
     if (document.location.href.includes("download")) {
         // Se a URL contiver "download", abre uma nova janela ou guia do navegador com o link pré-definido para o WhatsApp
-        window.open('https://wa.me/551126265184?text=Come%C3%A7ar%20J%C3%A1', '_blank');
+        window.open('https://api.whatsapp.com/send/?phone=553299582927&text=Ol%C3%A1&type=phone_number&app_absent=0', '_blank');
     } else {
         // Se a URL não contiver "download", prossegue com a próxima parte do código
 
